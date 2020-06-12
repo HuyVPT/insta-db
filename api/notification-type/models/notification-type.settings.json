@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notification_types",
+  "info": {
+    "name": "notificationType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "infomation",
+        "request"
+      ]
+    },
+    "notification": {
+      "model": "notifications",
+      "via": "notification_type"
+    }
+  }
+}

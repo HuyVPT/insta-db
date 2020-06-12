@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "follow_requests",
+  "info": {
+    "name": "FollowRequest"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "follow_requests"
+    },
+    "user_request": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "follow_requests"
+    }
+  }
+}

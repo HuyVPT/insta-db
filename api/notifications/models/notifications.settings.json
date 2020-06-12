@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notifications",
+  "info": {
+    "name": "notifications"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "sender_id": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "notifications"
+    },
+    "recipient_id": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "notifications"
+    },
+    "description": {
+      "type": "string"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    },
+    "link": {
+      "type": "string"
+    },
+    "notification_type": {
+      "via": "notification",
+      "model": "notification-type"
+    }
+  }
+}
