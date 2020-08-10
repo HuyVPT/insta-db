@@ -12,12 +12,16 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user",
-      "via": "follow_requests"
+      "via": "follow_request"
     },
     "user_request": {
       "plugin": "users-permissions",
       "model": "user",
       "via": "follow_requests"
+    },
+    "is_accepted": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

@@ -92,13 +92,17 @@
       ],
       "default": "public"
     },
-    "follow_requests": {
-      "via": "user_request",
-      "collection": "follow-request"
-    },
     "notifications": {
       "via": "recipient_id",
       "collection": "notifications"
+    },
+    "follow_request": {
+      "via": "user",
+      "collection": "follow-request"
+    },
+    "follow_requests": {
+      "via": "user_request",
+      "collection": "follow-request"
     }
   }
 }
